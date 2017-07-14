@@ -39,7 +39,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mCloseScreenBt.setOnClickListener(this);
         mRebootBt = (Button)findViewById(R.id.avtivity_main_reboot);
         mRebootBt.setOnClickListener(this);
-
         findViewById(R.id.activity_main).setOnClickListener(this);
     }
 
@@ -115,7 +114,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 PowerManager.WakeLock wakeLock = pm.newWakeLock(PowerManager.SCREEN_BRIGHT_WAKE_LOCK
                         | PowerManager.FULL_WAKE_LOCK
                         | PowerManager.ACQUIRE_CAUSES_WAKEUP
-                        | PowerManager.ON_AFTER_RELEASE, "TAG"); ;
+                        | PowerManager.ON_AFTER_RELEASE, "TAG");
                 KeyguardManager keyguardManager = (KeyguardManager) getSystemService(KEYGUARD_SERVICE);
                 wakeLock.acquire();                     //测试小米电视无效果
 //                wakeLock.release();

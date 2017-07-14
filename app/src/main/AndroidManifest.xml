@@ -32,6 +32,7 @@
                 <action android:name = "com.android.settings.action.REQUEST_POWER_OFF"/>
                 <action android:name="android.intent.action.BOOT_COMPLETED"></action>
                 <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.HOME"/>
             </intent-filter>
         </receiver>
 

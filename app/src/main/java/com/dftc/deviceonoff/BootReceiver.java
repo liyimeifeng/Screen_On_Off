@@ -13,13 +13,15 @@ import android.widget.Toast;
 
 public class BootReceiver extends BroadcastReceiver {
     private final static String TAG = BootReceiver.class.getSimpleName();
+
     @Override
     public void onReceive(Context context, Intent intent) {
         if (intent.getAction().equals("android.intent.action.BOOT_COMPLETED")) {
             Log.e(TAG, "设备已开机" );
-//            Intent i = new Intent(context, MainActivity.class);
-            Intent i = context.getPackageManager()
-                    .getLaunchIntentForPackage("com.dftc.deviceonoff");
+            Toast.makeText(context, "boot completed action has got", Toast.LENGTH_LONG).show();
+            Intent i = new Intent(context, MainActivity.class);
+//            Intent i = context.getPackageManager()
+//                    .getLaunchIntentForPackage("com.dftc.deviceonoff");
 
             i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             context.startActivity(i);
