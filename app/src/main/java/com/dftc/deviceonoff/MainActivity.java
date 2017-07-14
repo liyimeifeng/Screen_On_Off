@@ -218,14 +218,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 //        } catch (Exception e) {
 //            Log.e(TAG, e.toString(), e);
 //        }
-        String cmd = "su -c reboot -p";//让手机关机
-        try {
-            Runtime.getRuntime().exec(new String[]{"su","-c","reboot -p"});
-        } catch (IOException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-        }
-        Log.e(TAG, "已经关机" );
+
+
+//        String cmd = "su -c reboot -p";//让手机关机
+//        try {
+//            Runtime.getRuntime().exec(new String[]{"su","-c","reboot -p"});
+//        } catch (IOException e) {
+//            // TODO Auto-generated catch block
+//            e.printStackTrace();
+//        }
+//        Log.e(TAG, "已经关机" );
     }
 
     private void rebootDevice(){
